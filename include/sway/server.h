@@ -89,6 +89,9 @@ struct sway_server {
 	struct wlr_gamma_control_manager_v1 *gamma_control_manager_v1;
 	struct wl_listener gamma_control_set_gamma;
 
+	struct wlr_commit_timing_manager_v1 *commit_timing_manager_v1;
+	struct wl_listener commit_timer_create;
+
 	struct {
 		struct sway_session_lock *lock;
 		struct wlr_session_lock_manager_v1 *manager;
